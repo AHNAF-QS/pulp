@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0; /* Reset default body margin */
+            display: flex; /* Use flexbox for overall layout */
+            flex-direction: column; /* Stack header, main, and footer vertically */
+            min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+        }
+        header {
+            background-color: #333; /* Darker header background */
+            padding: 20px;
+            text-align: center;
+            color: white; /* White text for better contrast */
+        }
+        header h1{
+             margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        nav button:hover {
+            background-color: #367c39; /* Darker green on hover */
+        }
+
+        main {
+            padding: 20px;
+            flex: 1; /* Allow main to take up remaining vertical space */
+        }
+        article {
+            margin-bottom: 40px; /* Increased margin between articles */
+            padding: 20px;
+            border: 1px solid #ddd; /* Add a border around articles */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for articles */
+        }
+        article h2{
+            color: #2c3e50; /* Darker heading color */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd; /* Add a border below heading */
+            padding-bottom: 10px;
+        }
+        .topic {
+            margin-bottom: 20px;
+        }
+        .topic h2 {
+            color: #3498db; /* Blue for topic heading */
+        }
+        .topic p {
+            margin: 10px 0;
+            color: #555; /* Slightly darker paragraph text */
+        }
+        .topic ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .topic li {
+            margin: 5px 0;
+            color: #555;
+        }
+        .topic a {
+            color: #0078d7; /* Microsoft blue */
+            text-decoration: none; /* Remove default underline */
+            font-weight: bold;
+        }
+        .topic a:hover {
+            text-decoration: underline; /* Add underline on hover */
+            color: #0056b3; /* Darker blue on hover */
+        }
+        .topic .heading {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .topic .paragraph {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .topic .list {
+            margin-left: 20px;
+        }
+        .topic .list-item {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .topic .list-item span {
+            font-weight: normal;
+            color: #555;
+        }
+         .topic .list-item div {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark footer background */
+            color: white;
+            margin-top: 20px; /* Add space above the footer */
+        }
+        footer p {
+            margin: 0;
+        }
+
+       .topic .list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+        .topic .list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+
+        .topic .list-item div span.list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        /* Add styling for the button */
+        nav button {
+            padding: 10px 20px;
+            background-color: #0078d7; /* Microsoft blue */
+            color: white;
+            border: none;
+            border-radius: 1000px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background-color: #367c39;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>how to program in html</h1>
+    </header>
+    <nav>
+            <button onclick="window.location.href='page2.html'">Basics of html</button>
+            <button onclick="window.location.href='page1.html'"> Semantic</button>
+    </nav>
+    <main>
+        <article>
+            <h2>sematics</h2>
+            <ul>
+                <div class="topic">
+  <h2>Meaning, not appearance: Semantic HTML</h2>
+  <p>
+    Semantic HTML is about using HTML tags to convey the meaning and structure of your content, not just how it should look. This approach contrasts with older methods that relied heavily on <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags for layout, often leading to less readable and maintainable code.
+  </p>
+  <p>
+    <strong>Key Points:</strong>
+  </p>
+  <ul>
+    <li>
+      <strong>Clear Structure:</strong> Semantic HTML provides a clear structure for your content, making it easier to understand for both developers and browsers.
+    </li>
+    <li>
+      <strong>Accessibility:</strong> It improves accessibility for users with disabilities who rely on screen readers and other assistive technologies.
+    </li>
+    <li>
+      <strong>SEO Benefits:</strong> Search engines can better understand the content, which can improve search engine optimization (SEO).
+    </li>
+    <li>
+      <strong>Maintainability:</strong> Semantic code is easier to maintain and update.
+    </li>
+  </ul>
+  <p>
+    By using semantic HTML, you create more robust, accessible, and maintainable web pages.
+  </p>
+</div>
+                <li>
+                    <strong>HTML5 Elements:</strong> HTML5 introduced many new semantic elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>. These elements help define the structure of your document.
+                </li>
+                <li>
+                    <strong>Examples:</strong> Instead of using a generic <code>&lt;div&gt;</code> for a navigation menu, use the <code>&lt;nav&gt;</code> element. For a main content area, use the <code>&lt;main&gt;</code> element.
+                </li>
+                <li>
+                    <strong>Best Practices:</strong> Always choose the most appropriate semantic element for your content. This not only improves readability but also enhances the overall user experience.
+                </li>
+                <li>
+                    <strong>Resources:</strong> For more information on semantic HTML, check out the <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3Schools guide</a>.
+                </li>
+                <li>
+                    <strong>Conclusion:</strong> Using semantic HTML is a best practice in modern web development. It helps create a better structure for your content, making it more accessible and easier to maintain.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>non Semantic</h2>
+            <div class="topic">
+  <div class="heading">Meaning, not appearance: Semantic HTML</div>
+  <div class="paragraph">
+    Semantic HTML is about using HTML tags to convey the meaning and structure of your content, not just how it should look. This approach contrasts with older methods that relied heavily on <div> and <span> tags for layout, often leading to less readable and maintainable code.
+  </div>
+  <div class="paragraph">
+    <span class="bold">Key Points:</span>
+  </div>
+  <div class="list">
+    <div>
+      <span class="list-item">Clear Structure:</span> <span>Semantic HTML provides a clear structure for your content, making it easier to understand for both developers and browsers.</span>
+    </div>
+    <div>
+      <span class="list-item">Accessibility:</span> <span>It improves accessibility for users with disabilities who rely on screen readers and other assistive technologies.</span>
+    </div>
+    <div>
+      <span class="list-item">SEO Benefits:</span> <span>Search engines can better understand the content, which can improve search engine optimization (SEO).</span>
+    </div>
+    <div>
+      <span class="list-item">Maintainability:</span> <span>Semantic code is easier to maintain and update.</span>
+    </div>
+  </div>
+  <div class="paragraph">
+    By using semantic HTML, you create more robust, accessible, and maintainable web pages.
+  </div>
+</div>
+            <ul>
+                 <li>
+                    <strong>HTML5 Elements:</strong> HTML5 introduced many new semantic elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>. These elements help define the structure of your document.
+                </li>
+                <li>
+                    <strong>Examples:</strong> Instead of using a generic <code>&lt;div&gt;</code> for a navigation menu, use the <code>&lt;nav&gt;</code> element. For a main content area, use the <code>&lt;main&gt;</code> element.
+                </li>
+                <li>
+                    <strong>Best Practices:</strong> Always choose the most appropriate semantic element for your content. This not only improves readability but also enhances the overall user experience.
+                </li>
+                <li>
+                    <strong>Resources:</strong> For more information on semantic HTML, check out the <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3Schools guide</a>.
+                </li>
+                <li>
+                    <strong>Conclusion:</strong> Using semantic HTML is a best practice in modern web development. It helps create a better structure for your content, making it more accessible and easier to maintain.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 My HTML Guide</p>
+    </footer>
+</body>
+</html>

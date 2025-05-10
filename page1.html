@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+         /* Reset some default styles */
+         * {
+               box-sizing: border-box; /* Include padding and border in element's total width and height */
+               margin: 0; /* Remove default margin */
+               padding: 0; /* Remove default padding */
+         }
+         html,
+    body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0; /* Reset default body margin */
+            display: flex; /* Use flexbox for overall layout */
+            flex-direction: column; /* Stack header, main, and footer vertically */
+            min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+        }
+        header {
+            background-color: #333; /* Darker header background */
+            padding: 20px;
+            text-align: center;
+            color: white; /* White text for better contrast */
+        }
+        header h1{
+             margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        nav button:hover {
+            background-color: #367c39; /* Darker green on hover */
+        }
+
+        main {
+            padding: 20px;
+            flex: 1; /* Allow main to take up remaining vertical space */
+        }
+        article {
+            margin-bottom: 40px; /* Increased margin between articles */
+            padding: 20px;
+            border: 1px solid #ddd; /* Add a border around articles */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for articles */
+        }
+        article h2{
+            color: #2c3e50; /* Darker heading color */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd; /* Add a border below heading */
+            padding-bottom: 10px;
+        }
+        .topic {
+            margin-bottom: 20px;
+        }
+        .topic h2 {
+            color: #3498db; /* Blue for topic heading */
+        }
+        .topic p {
+            margin: 10px 0;
+            color: #555; /* Slightly darker paragraph text */
+        }
+        .topic ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .topic li {
+            margin: 5px 0;
+            color: #555;
+        }
+        .topic a {
+            color: #0078d7; /* Microsoft blue */
+            text-decoration: none; /* Remove default underline */
+            font-weight: bold;
+        }
+        .topic a:hover {
+            text-decoration: underline; /* Add underline on hover */
+            color: #0056b3; /* Darker blue on hover */
+        }
+        .topic .heading {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .topic .paragraph {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .topic .list {
+            margin-left: 20px;
+        }
+        .topic .list-item {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .topic .list-item span {
+            font-weight: normal;
+            color: #555;
+        }
+         .topic .list-item div {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark footer background */
+            color: white;
+            margin-top: 20px; /* Add space above the footer */
+        }
+        footer p {
+            margin: 0;
+        }
+
+       .topic .list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+        .topic .list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+
+        .topic .list-item div span.list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div {
+            margin-bottom: 5px;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span {
+            font-weight: normal;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span.bold {
+            font-weight: bold;
+        }
+        .topic .list-item div span.list-item div span.list-item div span.list-item div span.list-item {
+            font-weight: normal;
+        }
+        /* Add styling for the button */
+        nav button {
+            padding: 10px 20px;
+            background-color: #0078d7; /* Microsoft blue */
+            color: white;
+            border: none;
+            border-radius: 1000px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background-color: #367c39;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+        <h1>how to program in html</h1>
+   </header> 
+   <nav>
+      <button onclick="window.location.href='page2.html'">Basics of html</button>
+      <button onclick="window.location.href='page1.html'"> Semantic</button>
+   </nav>
+   <main>
+     <article>
+        <h2>HTML Basics</h2>
+        <p>HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.</p>
+        <p>HTML elements are the building blocks of HTML pages. They are represented by tags.</p>
+        <p>HTML tags are used to create elements. Tags are enclosed in angle brackets.</p>
+        <p>For example, the <code>&lt;p&gt;</code> tag is used to create a paragraph.</p>
+        <p>HTML documents are made up of elements. Each element has a start tag and an end tag.</p>
+        <p>For example, the <code>&lt;p&gt;</code> tag is a start tag and the <code>&lt;/p&gt;</code> tag is an end tag.</p>
+        <p>HTML elements can also have attributes. Attributes provide additional information about an element.</p>
+        <p>For example, the <code>&lt;a&gt;</code> tag is used to create a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+        <p>HTML is a markup language, not a programming language. It is used to structure content on the web.</p>
+        <a href="https://www.w3schools.com/html/">Learn more about HTML</a>
+     </article>
+    <article>
+        <h2>HTML Elements</h2>
+        <p>HTML elements are the building blocks of HTML pages. They are represented by tags.</p>
+        <p>HTML tags are used to create elements. Tags are enclosed in angle brackets.</p>
+        <p>For example, the <code>&lt;p&gt;</code> tag is used to create a paragraph.</p>
+        <p>HTML documents are made up of elements. Each element has a start tag and an end tag.</p>
+        <p>For example, the <code>&lt;p&gt;</code> tag is a start tag and the <code>&lt;/p&gt;</code> tag is an end tag.</p>
+        <p>HTML elements can also have attributes. Attributes provide additional information about an element.</p>
+        <p>For example, the <code>&lt;a&gt;</code> tag is used to create a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+     </article>
+     <article>
+        <h2>HTML Attributes</h2>
+        <p>HTML attributes provide additional information about an element.</p>
+        <p>Attributes are always specified in the start tag.</p>
+        <p>For example, the <code>&lt;a&gt;</code> tag is used to create a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+        <p>Attributes are always specified in the start tag.</p>
+        <p>For example, the <code>&lt;a href="https://www.example.com"&gt;</code> tag creates a hyperlink to "https://www.example.com".</p>
+        <p>HTML attributes are always specified in the start tag.</p>
+        <p>For example, the <code>&lt;a href="https://www.example.com"&gt;</code> tag creates a hyperlink to "https://www.example.com".</p>
+        <p>HTML attributes are always specified in the start tag.</p>
+        <p>For example, the <code>&lt;a href="https://www.example.com"&gt;</code> tag creates a hyperlink to "https://www.example.com".</p>
+        <p>HTML attributes are always specified in the start tag.</p>
+        <p>For example, the <code>&lt;a href="https://www.example.com"&gt;</code> tag creates a hyperlink to "https://www.example.com".</p>
+        <a href="https://www.w3schools.com/html/html_attributes.asp">Learn more about HTML attributes</a>
+        </article>
+   </main>
+    <footer>
+          <p>&copy; 2025 Your Name</p>
+          </footer>
+</body>
+</html>
